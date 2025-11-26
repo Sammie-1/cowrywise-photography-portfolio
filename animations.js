@@ -1,19 +1,9 @@
-/**
- * Photography Portfolio - Animation System
- * Lightweight, performance-first animations using Intersection Observer API
- * Respects user's motion preferences
- */
-
-// Check if user prefers reduced motion
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// Animation configuration
 const animationConfig = {
     threshold: 0.15,
     rootMargin: '0px 0px -100px 0px'
 };
-
-// Initialize animations when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     if (!prefersReducedMotion) {
         initScrollAnimations();
@@ -25,9 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-/**
- * Scroll-triggered animations using Intersection Observer
- */
 function initScrollAnimations() {
     const observerOptions = {
         threshold: animationConfig.threshold,
@@ -37,19 +24,16 @@ function initScrollAnimations() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                // Add stagger delay for grid items
                 const delay = entry.target.dataset.delay || 0;
                 setTimeout(() => {
                     entry.target.classList.add('animate-in');
                 }, delay);
                 
-                // Unobserve after animation to improve performance
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // Observe elements with animation classes
     const animatedElements = document.querySelectorAll(
         '.fade-up, .fade-in, .scale-in, .slide-left, .slide-right'
     );
@@ -57,9 +41,6 @@ function initScrollAnimations() {
     animatedElements.forEach(el => observer.observe(el));
 }
 
-/**
- * Parallax effect for hero section
- */
 function initParallaxEffect() {
     const heroBackground = document.querySelector('.hero-bg-image');
     const testimonialBackground = document.querySelector('.testimonial-bg-image');
@@ -95,9 +76,6 @@ function initParallaxEffect() {
     });
 }
 
-/**
- * Hero text typing/fade animation
- */
 function initHeroTextAnimation() {
     const profileName = document.querySelector('.profile-name');
     const profileDesc = document.querySelector('.profile-description');
@@ -114,9 +92,6 @@ function initHeroTextAnimation() {
     }
 }
 
-/**
- * Interactive slide navigation
- */
 function initSlideNavigation() {
     const slideButtons = document.querySelectorAll('.slide-btn');
     const slides = [
@@ -145,18 +120,16 @@ function initSlideNavigation() {
             const profileDesc = document.querySelector('.profile-description');
             const profileImage = document.querySelector('.profile-image');
             
-            if (index === 0) { // Previous
+            if (index === 0) {
                 currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            } else { // Next
+            } else {
                 currentSlide = (currentSlide + 1) % slides.length;
             }
             
-            // Fade out
             profileName.style.opacity = '0';
             profileDesc.style.opacity = '0';
             profileImage.style.opacity = '0';
             
-            // Update content and fade in
             setTimeout(() => {
                 profileName.textContent = slides[currentSlide].name;
                 profileDesc.textContent = slides[currentSlide].description;
@@ -167,21 +140,16 @@ function initSlideNavigation() {
                 profileImage.style.opacity = '1';
             }, 500);
             
-            // Button press animation
             btn.style.transform = 'scale(0.9)';
             setTimeout(() => btn.style.transform = 'scale(1)', 200);
         });
     });
 }
 
-/**
- * Form field animations and interactions
- */
 function initFormAnimations() {
     const formControls = document.querySelectorAll('.form-control');
     
     formControls.forEach(input => {
-        // Focus animations
         input.addEventListener('focus', function() {
             this.parentElement.classList.add('focused');
         });
@@ -192,13 +160,11 @@ function initFormAnimations() {
             }
         });
         
-        // Ripple effect on click
         input.addEventListener('click', function(e) {
             createRipple(e, this);
         });
     });
     
-    // Submit button animation
     const submitBtn = document.querySelector('.btn-submit');
     if (submitBtn) {
         submitBtn.addEventListener('click', function(e) {
@@ -211,9 +177,6 @@ function initFormAnimations() {
     }
 }
 
-/**
- * Create ripple effect
- */
 function createRipple(event, element) {
     const ripple = document.createElement('span');
     const rect = element.getBoundingClientRect();
@@ -233,9 +196,6 @@ function createRipple(event, element) {
     setTimeout(() => ripple.remove(), 800);
 }
 
-/**
- * Animate form submission
- */
 function animateSubmit(button) {
     const originalText = button.textContent;
     button.textContent = 'SENDING...';
@@ -253,9 +213,6 @@ function animateSubmit(button) {
     }, 2000);
 }
 
-/**
- * Smooth scroll for anchor links
- */
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -276,9 +233,6 @@ function initSmoothScroll() {
     });
 }
 
-/**
- * Add hover tilt effect to portfolio items
- */
 document.addEventListener('DOMContentLoaded', () => {
     if (!prefersReducedMotion) {
         const portfolioItems = document.querySelectorAll('.portfolio-small, .portfolio-medium');
@@ -309,8 +263,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Loading animation
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
-
