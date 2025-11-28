@@ -77,23 +77,23 @@ function initParallaxEffect() {
 }
 
 function initHeroTextAnimation() {
-    const profileName = document.querySelector('.profile-name');
-    const profileDesc = document.querySelector('.profile-description');
-    const heroButtons = document.querySelector('.hero-buttons');
+    const heroTitle = document.querySelector('.hero__title');
+    const heroDescription = document.querySelector('.hero__description');
+    const heroActions = document.querySelector('.hero__actions');
     
-    if (profileName) {
-        setTimeout(() => profileName.classList.add('animate-in'), 500);
+    if (heroTitle) {
+        setTimeout(() => heroTitle.classList.add('animate-in'), 500);
     }
-    if (profileDesc) {
-        setTimeout(() => profileDesc.classList.add('animate-in'), 1000);
+    if (heroDescription) {
+        setTimeout(() => heroDescription.classList.add('animate-in'), 1000);
     }
-    if (heroButtons) {
-        setTimeout(() => heroButtons.classList.add('animate-in'), 1500);
+    if (heroActions) {
+        setTimeout(() => heroActions.classList.add('animate-in'), 1500);
     }
 }
 
 function initSlideNavigation() {
-    const slideButtons = document.querySelectorAll('.slide-btn');
+    const slideButtons = document.querySelectorAll('.hero__carousel-button');
     const slides = [
         {
             name: 'Jimoh Lawal',
@@ -116,9 +116,9 @@ function initSlideNavigation() {
     
     slideButtons.forEach((btn, index) => {
         btn.addEventListener('click', () => {
-            const profileName = document.querySelector('.profile-name');
-            const profileDesc = document.querySelector('.profile-description');
-            const profileImage = document.querySelector('.profile-image');
+            const heroTitle = document.querySelector('.hero__title');
+            const heroDescription = document.querySelector('.hero__description');
+            const heroImage = document.querySelector('.hero__image');
             
             if (index === 0) {
                 currentSlide = (currentSlide - 1 + slides.length) % slides.length;
@@ -126,18 +126,18 @@ function initSlideNavigation() {
                 currentSlide = (currentSlide + 1) % slides.length;
             }
             
-            profileName.style.opacity = '0';
-            profileDesc.style.opacity = '0';
-            profileImage.style.opacity = '0';
+            heroTitle.style.opacity = '0';
+            heroDescription.style.opacity = '0';
+            heroImage.style.opacity = '0';
             
             setTimeout(() => {
-                profileName.textContent = slides[currentSlide].name;
-                profileDesc.textContent = slides[currentSlide].description;
-                profileImage.src = slides[currentSlide].image;
+                heroTitle.textContent = slides[currentSlide].name;
+                heroDescription.textContent = slides[currentSlide].description;
+                heroImage.src = slides[currentSlide].image;
                 
-                profileName.style.opacity = '1';
-                profileDesc.style.opacity = '1';
-                profileImage.style.opacity = '1';
+                heroTitle.style.opacity = '1';
+                heroDescription.style.opacity = '1';
+                heroImage.style.opacity = '1';
             }, 500);
             
             btn.style.transform = 'scale(0.9)';
@@ -147,9 +147,9 @@ function initSlideNavigation() {
 }
 
 function initFormAnimations() {
-    const formControls = document.querySelectorAll('.form-control');
+    const formInputs = document.querySelectorAll('.contact__input');
     
-    formControls.forEach(input => {
+    formInputs.forEach(input => {
         input.addEventListener('focus', function() {
             this.parentElement.classList.add('focused');
         });
@@ -165,7 +165,7 @@ function initFormAnimations() {
         });
     });
     
-    const submitBtn = document.querySelector('.btn-submit');
+    const submitBtn = document.querySelector('.contact__submit');
     if (submitBtn) {
         submitBtn.addEventListener('click', function(e) {
             const form = this.closest('form');
@@ -235,7 +235,7 @@ function initSmoothScroll() {
 
 document.addEventListener('DOMContentLoaded', () => {
     if (!prefersReducedMotion) {
-        const portfolioItems = document.querySelectorAll('.portfolio-small, .portfolio-medium');
+        const portfolioItems = document.querySelectorAll('.portfolio__card--medium, .portfolio__card--large');
         
         portfolioItems.forEach(item => {
             item.addEventListener('mouseenter', function() {

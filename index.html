@@ -9,46 +9,46 @@
 </head>
 
 <body>
-    <section id="hero-section">
-        <nav class="nav-bar">
-            <img class="nav-bar__logo" src="./assets/images/logo.png" alt="CyberPhym Logo" />
-            <div class="nav-bar__links">
-                <a href="#hero-section">
+    <section id="hero-section" class="hero">
+        <nav class="navigation">
+            <img class="navigation__logo" src="./assets/images/logo.png" alt="CyberPhym Logo" />
+            <div class="navigation__social-links">
+                <a href="#hero-section" class="navigation__link">
                     <img src="./assets/icons/facebook.svg" alt="Facebook Logo" />
                 </a>
-                <a href="#hero-section">
+                <a href="#hero-section" class="navigation__link">
                     <img src="./assets/icons/twitter.svg" alt="Twitter Logo" />
                 </a>
-                <a href="#hero-section">
+                <a href="#hero-section" class="navigation__link">
                     <img src="./assets/icons/instagram.svg" alt="instagram Logo" />
                 </a>
             </div>
         </nav>
 
-        <div class="hero-content">
-            <img class="hero-content__img profile-image" src="./assets/images/headshot.png" alt="A headshot of the photographer, Jimoh Lawal" />
-            <h1 class="hero-content__title profile-name">Jimoh Lawal</h1>
-            <p class="hero-content__subtitle profile-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+        <div class="hero__content">
+            <img class="hero__image" src="./assets/images/headshot.png" alt="A headshot of the photographer, Jimoh Lawal" />
+            <h1 class="hero__title">Jimoh Lawal</h1>
+            <p class="hero__description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
                 Velit officia consequat duis enim velit mollit. Exercitation v enim velit mollit. Exercitation v enim
                 vetxercitation veniam consequat sunt nostrud amet.
             </p>
-            <div class="hero-content__buttons hero-buttons">
-                <a href="#portfolio-section" class="btn btn--secondary">
+            <div class="hero__actions">
+                <a href="#portfolio-section" class="button button--secondary">
                     See Portfolio
                 </a>
-                <button class="btn btn--primary">Hire Me</button>
-                <div class="hero-section-carousel--arrows">
-                    <button class="btn hero-section-carousel--arrows-btn slide-btn">
+                <button class="button button--primary">Hire Me</button>
+                <div class="hero__carousel-controls">
+                    <button class="button hero__carousel-button">
                         <img src="./assets/icons/leftArrow.svg" alt="Left Arrow" />
                     </button>
-                    <button class="btn hero-section-carousel--arrows-btn slide-btn">
+                    <button class="button hero__carousel-button">
                         <img src="./assets/icons/rightArrow.svg" alt="Right Arrow" />
                     </button>
-                    <div class="hero-section__carousel-indicators">
-                        <div class="hero-section__carousel-indicator-dot"></div>
-                        <div class="hero-section__carousel-indicator-dot hero-section__carousel-indicator-dot--active">
+                    <div class="hero__carousel-indicators">
+                        <div class="hero__indicator"></div>
+                        <div class="hero__indicator hero__indicator--active">
                         </div>
-                        <div class="hero-section__carousel-indicator-dot"></div>
+                        <div class="hero__indicator"></div>
                     </div>
                 </div>
             </div>
@@ -56,136 +56,136 @@
 
     </section>
 
-    <section id="fun-facts-section">
-        <h2 class="fade-up">Fun Facts</h2>
-        <div class="fun-facts-cards funfacts__cards">
-            <div class="fun-facts-card scale-in" data-delay="0">
-                <img class="fun-facts-card__icon" src="./assets/icons/camera.svg" alt="" />
-                <p class="fun-facts-card__description">Got my first camera at 8 years old</p>
+    <section id="fun-facts-section" class="fun-facts">
+        <h2 class="fun-facts__heading fade-up">Fun Facts</h2>
+        <div class="fun-facts__grid">
+            <div class="fun-facts__card scale-in" data-delay="0">
+                <img class="fun-facts__icon" src="./assets/icons/camera.svg" alt="" />
+                <p class="fun-facts__description">Got my first camera at 8 years old</p>
             </div>
-            <div class="fun-facts-card scale-in" data-delay="100">
-                <img class="fun-facts-card__icon" src="./assets/icons/leaf.svg" alt="" />
-                <p class="fun-facts-card__description">Photo of Nature are my favorites</p>
+            <div class="fun-facts__card scale-in" data-delay="100">
+                <img class="fun-facts__icon" src="./assets/icons/leaf.svg" alt="" />
+                <p class="fun-facts__description">Photo of Nature are my favorites</p>
             </div>
-            <div class="fun-facts-card scale-in" data-delay="200">
-                <img class="fun-facts-card__icon" src="./assets/icons/globe.svg" alt="" />
-                <p class="fun-facts-card__description">Love for photography has taken me to 15 countries</p>
+            <div class="fun-facts__card scale-in" data-delay="200">
+                <img class="fun-facts__icon" src="./assets/icons/globe.svg" alt="" />
+                <p class="fun-facts__description">Love for photography has taken me to 15 countries</p>
             </div>
-            <div class="fun-facts-card scale-in" data-delay="300">
-                <img class="fun-facts-card__icon" src="./assets/icons/trophy.svg" alt="" />
-                <p class="fun-facts-card__description">Have won 5 international photography contests</p>
+            <div class="fun-facts__card scale-in" data-delay="300">
+                <img class="fun-facts__icon" src="./assets/icons/trophy.svg" alt="" />
+                <p class="fun-facts__description">Have won 5 international photography contests</p>
             </div>
         </div>
     </section>
 
-    <section id="portfolio-section">
-        <h2 class="fade-up">Portfolio</h2>
-        <div class="portfolio-work-card slide-left portfolio-large">
-            <div class="portfolio-work-card__img-container">
-                <img class="portfolio-work-card__img" src="./assets/images/featuredWorks.png"
+    <section id="portfolio-section" class="portfolio">
+        <h2 class="portfolio__heading fade-up">Portfolio</h2>
+        <div class="portfolio__card portfolio__card--large slide-left">
+            <div class="portfolio__image-wrapper">
+                <img class="portfolio__image" src="./assets/images/featuredWorks.png"
                     alt="A man holding a camera" />
             </div>
-            <div class="portfolio-work-card__description">
-                <h3 class="portfolio-work-card__title">Featured Work</h3>
-                <p class="portfolio-work-card__subtitle">
+            <div class="portfolio__content">
+                <h3 class="portfolio__title">Featured Work</h3>
+                <p class="portfolio__description">
                     Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
                     duis enim velit vetxercitation veniam consequat sunt nostrud amet.
                 </p>
-                <div class="portfolio-work-card__date-location">
-                    <div class="portfolio-work-card__date">
+                <div class="portfolio__metadata">
+                    <div class="portfolio__date">
                         <img src="./assets/icons/calendar.svg" alt="" />
                         <p>February, 2019</p>
                     </div>
-                    <div class="portfolio-work-card__location">
+                    <div class="portfolio__location">
                         <img src="./assets/icons/location.svg" alt="" />
                         <p>Yola, Nigeria</p>
                     </div>
                 </div>
-                <button class="btn btn--primary">See Featured Work</button>
+                <button class="button button--primary">See Featured Work</button>
             </div>
         </div>
-        <div class="portfolio-work-card portfolio-work-card__other-works slide-right portfolio-medium">
-            <div class="portfolio-work-card__img-container">
-                <img class="portfolio-work-card__img" src="./assets/images/otherWorks.png"
+        <div class="portfolio__card portfolio__card--medium slide-right">
+            <div class="portfolio__image-wrapper">
+                <img class="portfolio__image" src="./assets/images/otherWorks.png"
                     alt="Three pictures showing other works of the photographer" />
             </div>
-            <div class="portfolio-work-card__description">
-                <h3 class="portfolio-work-card__title">Other Works</h3>
-                <p class="portfolio-work-card__subtitle">
+            <div class="portfolio__content">
+                <h3 class="portfolio__title">Other Works</h3>
+                <p class="portfolio__description">
                     Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
                     duis enim velit vetxercitation veniam consequat sunt nostrud amet.
                 </p>
-                <button class="btn btn--primary">See Full Portfolio</button>
+                <button class="button button--primary">See Full Portfolio</button>
             </div>
         </div>
     </section>
 
     <section id="collections-section" class="collections">
-        <h2 class="fade-up">Exclusive Collections</h2>
-        <p class="collections__subtitle fade-in">
+        <h2 class="collections__heading fade-up">Exclusive Collections</h2>
+        <p class="collections__description fade-in">
             Take a look at my exclusive stock photos at these awesome marketplaces. You won't be disappointed!
         </p>
-        <div class="collections-logos collections__icons">
-            <img class="scale-in" data-delay="0" src="./assets/images/behanceLogo.png" alt="Behance Logo" />
-            <img class="scale-in" data-delay="100" src="./assets/images/vimeoLogo.png" alt="Vimeo Logo" />
-            <img class="scale-in" data-delay="200" src="./assets/images/pinterestLogo.png" alt="Pinterest Logo" />
-            <img class="scale-in" data-delay="300" src="./assets/images/tumblrLogo.png" alt="Tumblr Logo" />
-            <img class="scale-in" data-delay="400" src="./assets/images/basketballLogo.png" alt="Basketball Logo" />
+        <div class="collections__logos">
+            <img class="collections__logo scale-in" data-delay="0" src="./assets/images/behanceLogo.png" alt="Behance Logo" />
+            <img class="collections__logo scale-in" data-delay="100" src="./assets/images/vimeoLogo.png" alt="Vimeo Logo" />
+            <img class="collections__logo scale-in" data-delay="200" src="./assets/images/pinterestLogo.png" alt="Pinterest Logo" />
+            <img class="collections__logo scale-in" data-delay="300" src="./assets/images/tumblrLogo.png" alt="Tumblr Logo" />
+            <img class="collections__logo scale-in" data-delay="400" src="./assets/images/basketballLogo.png" alt="Basketball Logo" />
         </div>
     </section>
 
-    <section class="quote-section quote">
-        <img class="quote-section__icon scale-in" src="./assets/icons/quoteIcon.svg" alt="" />
-        <h2 class="quote-section__quote fade-in">
+    <section class="quote">
+        <img class="quote__icon scale-in" src="./assets/icons/quoteIcon.svg" alt="" />
+        <h2 class="quote__text fade-in">
             <blockquote>Photography is the only language that can be understood anywhere in the world.</blockquote>
         </h2>
-        <p class="quote-section__author fade-in">-Bruno Babey</p>
+        <p class="quote__author fade-in">-Bruno Babey</p>
     </section>
 
-    <section class="contact-section">
-        <h2 class="fade-up">Get in Touch</h2>
-        <p class="contact-section__subtitle fade-in">
+    <section class="contact">
+        <h2 class="contact__heading fade-up">Get in Touch</h2>
+        <p class="contact__description fade-in">
             Take a look at my exclusive stock photos at these awesome marketplaces. You won't be disappointed!
         </p>
-        <form class="contact-form fade-in">
-            <div class="contact-form__input-container form-group">
-                <input class="contact-form__input form-control" placeholder="Name" id="name" required />
-                <label class="contact-form__label" for="name">Name</label>
+        <form class="contact__form fade-in">
+            <div class="contact__field">
+                <input class="contact__input" placeholder="Name" id="name" required />
+                <label class="contact__label" for="name">Name</label>
 
             </div>
-            <div class="contact-form__input-container form-group">
-                <input class="contact-form__input form-control" type="email" placeholder="Email" id="email" required />
-                <label class="contact-form__label" for="email">Email</label>
+            <div class="contact__field">
+                <input class="contact__input" type="email" placeholder="Email" id="email" required />
+                <label class="contact__label" for="email">Email</label>
             </div>
-            <div class="contact-form__input-container form-group">
-                <input class="contact-form__input form-control" placeholder="Subject" id="subject" />
-                <label class="contact-form__label" for="subject">Subject</label>
+            <div class="contact__field">
+                <input class="contact__input" placeholder="Subject" id="subject" />
+                <label class="contact__label" for="subject">Subject</label>
             </div>
-            <div class="contact-form__input-container form-group">
-                <textarea class="contact-form__input form-control" placeholder="Message" id="message" required rows="10"></textarea>
-                <label class="contact-form__label" for="message">Message</label>
+            <div class="contact__field">
+                <textarea class="contact__input" placeholder="Message" id="message" required rows="10"></textarea>
+                <label class="contact__label" for="message">Message</label>
             </div>
-            <button class="btn btn--primary contact-form__submit-btn btn-submit" type="submit">Submit</button>
+            <button class="button button--primary contact__submit" type="submit">Submit</button>
         </form>
 
     </section>
 
-    <footer>
-        <div class="footer__social-links">
-            <a href="#hero-section">
+    <footer class="footer">
+        <div class="footer__social">
+            <a href="#hero-section" class="footer__link">
                 <img src="./assets/icons/facebook.svg" alt="Facebook Logo" />
             </a>
-            <a href="#hero-section">
+            <a href="#hero-section" class="footer__link">
                 <img src="./assets/icons/twitter.svg" alt="Twitter Logo" />
             </a>
-            <a href="#hero-section">
+            <a href="#hero-section" class="footer__link">
                 <img src="./assets/icons/instagram.svg" alt="instagram Logo" />
             </a>
         </div>
-        <div>
-            <img class="nav-bar__logo" src="./assets/images/logo.png" alt="CyberPhym Logo" />
-            <p>© 2025</p>
-            <p>Privacy - Terms</p>
+        <div class="footer__info">
+            <img class="footer__logo" src="./assets/images/logo.png" alt="CyberPhym Logo" />
+            <p class="footer__copyright">© 2025</p>
+            <p class="footer__legal">Privacy - Terms</p>
         </div>
     </footer>
 
